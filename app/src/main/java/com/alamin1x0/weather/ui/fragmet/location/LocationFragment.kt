@@ -6,16 +6,19 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.alamin1x0.weather.R
+import com.alamin1x0.weather.databinding.FragmentLocationBinding
 
 
 class LocationFragment : Fragment() {
 
+    lateinit var binding: FragmentLocationBinding
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_location, container, false)
+        binding = FragmentLocationBinding.inflate(layoutInflater)
+
+        return binding.root
     }
 
 }
